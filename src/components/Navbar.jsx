@@ -1,10 +1,22 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
+
 export default function Navbar() {
-return (
-<nav className="bg-gray-300 p-3 flex gap-4">
-<Link to="/home">Home</Link>
-<Link to="/about">About</Link>
-<Link to="/contact">Contact</Link>
-</nav>
-);
+  const [open, setOpen] = useState(false);
+
+  return (
+    <div className="navbar">
+      <div className="navbar-brand">MySite</div>
+
+      <div className="nav-toggle" onClick={() => setOpen(!open)}>
+        ☰
+      </div>
+
+      <div className={`nav-menu ${open ? "show" : ""}`}>
+        <Link to="/home" onClick={() => setOpen(false)}>Home</Link>
+        <Link to="/about" onClick={() => setOpen(false)}>About</Link>
+        <Link to="/contact" onClick={() => setOpen(false)}>Contact</Link>
+      </div>
+    </div>
+  );
 }
