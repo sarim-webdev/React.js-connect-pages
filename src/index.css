@@ -42,11 +42,9 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* ----------------------------------
-   Navbar Responsive Styling
------------------------------------ */
 
-/* Mobile layout */
+
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -61,15 +59,15 @@ nav a:hover {
   font-weight: bold;
 }
 
-/* Hamburger Button */
+
 .nav-toggle {
   font-size: 26px;
   color: white;
   cursor: pointer;
-  display: none; /* desktop me hidden */
+  display: none; 
 }
 
-/* Menu UL */
+
 .nav-menu {
   display: flex;
   gap: 20px;
@@ -83,10 +81,10 @@ nav a:hover {
 
 /* Mobile Responsive Menu */
 @media (max-width: 768px) {
-  nav { display: none; } /* old nav hide */
+  nav { display: none; } 
 
   .nav-toggle {
-    display: block; /* mobile me visible */
+    display: block;
   }
 
   .nav-menu {
@@ -97,19 +95,17 @@ nav a:hover {
     width: 200px;
     padding: 15px;
     border-radius: 8px;
-    display: none; /* toggle ke baghair nahi dikhega */
+    display: none; 
     flex-direction: column;
     gap: 15px;
   }
 
   .nav-menu.show {
-    display: flex; /* hamburger click par dropdown */
+    display: flex; 
   }
 }
 
-/* ----------------------------------
-   Home Text
------------------------------------ */
+
 .text-2xl {
   height: 100vh;
   display: flex;
@@ -118,9 +114,7 @@ nav a:hover {
   color: #007bff;
 }
 
-/* ----------------------------------
-   Login / Signup Auth Card
------------------------------------ */
+
 .auth-card {
   max-width: 400px;
   width: 100%;
